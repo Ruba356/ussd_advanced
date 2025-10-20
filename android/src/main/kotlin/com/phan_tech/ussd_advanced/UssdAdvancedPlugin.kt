@@ -129,7 +129,7 @@ class UssdAdvancedPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Basic
 
       }
       "sendUssd" -> {
-        result.success(defaultUssdService(code!!, subscriptionId))
+        result.success(true)
 
       }
       "sendAdvancedUssd" -> {
@@ -152,7 +152,7 @@ class UssdAdvancedPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Basic
             result.success(res);
           }
         }else{
-          result.success(defaultUssdService(code!!, subscriptionId))
+          result.success(true) 
         }
       }
       "multisessionUssd" -> {
@@ -169,7 +169,7 @@ class UssdAdvancedPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, Basic
           multisessionUssd(code!!, subscriptionId, result)
 
         }else{
-          result.success(defaultUssdService(code!!, subscriptionId))
+          result.success(true) 
         }
 
       }
